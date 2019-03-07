@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="#ee5757"
+        android:gravity="center"
+        android:text="购物车"
+        android:textSize="@dimen/dp_20"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cart_recy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="8">
+
+    </android.support.v7.widget.RecyclerView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/cart_checkAll"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="全选" />
+        <TextView
+            android:id="@+id/cart_total"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="合计:0.0"
+            android:gravity="center_vertical"/>
+        <Button
+            android:id="@+id/cart_btn_pay"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#f00"
+            android:text="结算"
+            android:textSize="@dimen/sp_18"/>
+
+    </LinearLayout>
+</LinearLayout>
